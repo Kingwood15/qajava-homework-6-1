@@ -14,12 +14,10 @@ public class StatsService {
 
     public int averageMonthSales(int[] sales) {
 
-        int average;
-        int sum = 0;
+        StatsService service = new StatsService();
 
-        for (int sale : sales) {
-            sum += sale;
-        }
+        int average;
+        int sum = service.sumYearSales(sales);;
 
         average = sum / sales.length;
 
