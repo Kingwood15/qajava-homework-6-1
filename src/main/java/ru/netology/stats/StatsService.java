@@ -14,10 +14,8 @@ public class StatsService {
 
     public int averageMonthSales(int[] sales) {
 
-        StatsService service = new StatsService();
-
         int average;
-        int sum = service.sumYearSales(sales);;
+        int sum = sumYearSales(sales);
 
         average = sum / sales.length;
 
@@ -56,11 +54,9 @@ public class StatsService {
 
     public int countMonthLowAverageSales(int[] sales) {
 
-        StatsService service = new StatsService();
-
         int average, count = 0;
 
-        average = service.averageMonthSales(sales);
+        average = averageMonthSales(sales);
 
         for (int sale : sales) {
             if (sale <= average) {
@@ -73,11 +69,9 @@ public class StatsService {
 
     public int countMonthHighAverageSales(int[] sales) {
 
-        StatsService service = new StatsService();
-
         int average, count = 0;
 
-        average = service.averageMonthSales(sales);
+        average = averageMonthSales(sales);
 
         for (int sale : sales) {
             if (sale >= average) {
